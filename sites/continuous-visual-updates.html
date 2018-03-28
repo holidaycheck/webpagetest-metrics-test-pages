@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>continuour visual updates</title>
+</head>
+
+<body role="main">
+  <h1>Continuous Visual Updates</h1>
+  <h2>Hypothesis</h2>
+  <p>
+    The metric <code>VisualComplete</code> will kinda timeout, because we do constantly update the page.
+    If it won't timeout, it will most probably reach a threshold at which it always stops.
+  </p>
+  
+  <h2>Expecation</h2>
+  <p>
+    <code>VisualComplete</code> might either not be measured ever, or it will always have the same value,
+    due to the described timeout.
+  </p>
+  
+  <hr/>
+  
+  <div id="updateable">0</div>
+
+  <script>
+    setInterval(() => {
+      const el = document.getElementById('updateable');
+      el.style.fontSize = Math.random()*10 + 'rem';
+      el.innerText = parseInt(el.innerText) + 1 + ' ... ' + el.style.fontSize;
+    }, 1000);
+  </script>
+</body>
+
+</html>
