@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>delay before finish render</title>
+</head>
+
+<body role="main">
+  <h1>Delay Before Finish Render</h1>
+  <h2>Hypothesis</h2>
+  <p>
+     <code>????</code>
+  </p>
+  
+  <h2>Expecation</h2>
+  <p>
+  </p>
+  
+  <hr/>
+  
+  <div id="updateable" style="font-size: 5rem;">0</div>
+
+  <script>
+    setTimeout(() => {
+      const el = document.getElementById('updateable');
+      el.innerText = 'not 0';
+    }, 3000);
+  </script>
+</body>
+
+</html>
