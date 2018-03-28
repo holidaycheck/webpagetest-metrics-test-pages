@@ -25,7 +25,7 @@
     setTimeout(() => {
       const el = document.getElementById('updateable');
       el.innerText = 'not 0';
-    }, 3000);
+    }, window.location.search.replace('?timeout=', '') || 1);
   </script>
 </body>
 
